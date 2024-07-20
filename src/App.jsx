@@ -10,33 +10,24 @@ import LoginModal from "./components/LoginModal";
 function App() {
   const [signupModalOpen, setSignupModalOpen] = useState(false);
   const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const [todoListItem, setTodoListItem] = useState([]);
 
-  const [todoListItem, setTodoListItem] = useState([
-    {
-      id: 1,
-      text: "Stop having no friends",
-    },
-    {
-      id: 2,
-      text: "Join together with newly aquired friends",
-    },
-    {
-      id: 3,
-      text: "Come up with a kickass project idea",
-    },
-    {
-      id: 4,
-      text: "Hash out the details for the project",
-    },
-    {
-      id: 5,
-      text: "Work on my part for Monday",
-    },
-    {
-      id: 6,
-      text: "Present my super cool mockup",
-    },
-  ]);
+  const addTodoListItem = (text) => {
+    // determine the next id value
+    const nextId = todoListItem.length > 0 
+      ? Math.max(...todoListItem.map(item => item.id)) + 1 
+      : 1;
+
+    // create the new todo item
+    const addedTodoItem = {
+      id: nextId,
+      text
+    };
+
+    // update the state with the new todo item
+    const allTodosArr = [...todoListItem, addedTodoItem];
+    setTodoListItem(allTodosArr);
+  };
 
   const signupModalToggler = () => {
     setSignupModalOpen((prevModal) => !prevModal);
@@ -54,7 +45,7 @@ function App() {
       <div className="content-container">
         <SideNavbar />
         <MainContent />
-        <TodoList todoListItem={todoListItem} />
+        <TodoList todoListItem={todoListItem} addTodoListItem={addTodoListItem} />
       </div>
     </div>
   );

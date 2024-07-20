@@ -66,6 +66,10 @@
   }
 }
 
+input:focus{
+  outline: unset;
+}
+
 .buttons{
   display: flex;
   justify-content: space-evenly;

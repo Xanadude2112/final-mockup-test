@@ -47,40 +47,96 @@
   justify-content: space-evenly;
 }
 
-.list-item{
+.new-todo-list-item{
+  width: 81%;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  width: auto;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.add-todo-item{
+  width: 90%;
+  margin-left: 1px;
+  border: none;
+  background-color: inherit;
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  color: #ffffff;
+}
+
+.add-todo-item:focus{
+  outline: unset;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.check-add{
+  width: 12px;
+  height: 11px;
+  border-radius: 20px;
+  border: 2px solid #ffc800;
+  margin-right: 5%;
+}
+
+.todo-submit{
+  color: #00c300;
+  font-size: 1.4rem;
   margin-left: 5%;
   cursor: pointer;
-  margin-bottom: 15%;
   transition: 0.25s ease;
 }
 
-.list-item:hover{
-  .checks{
-    border: 2px solid #00c300;
+.todo-submit:hover{
+  filter: drop-shadow(0 0 1rem #ffffff);
+}
+
+
+@keyframes fidget {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
-.checks{
-  width: 10px;
-  height: 10px;
-  border-radius: 20px;
-  border: 2px solid #ffffff;
-  margin-right: 5%;
-  transition: 0.25s ease;
-}
-
-.checked{
-  width: 10px;
-  height: 10px;
-  border-radius: 20px;
-  border: 2px solid #00c300;
-  background-color: #00c300;
-  margin-right: 5%;
-  filter: drop-shadow(0 0 1rem #59ff59);
-  transition: 0.25s ease;
+.error {
+  .check-add{
+    width: 12px;
+    height: 11px;
+    border-radius: 20px;
+    border: 2px solid #e50000;
+    margin-right: 5%;
+  }
+  .add-todo-item{
+    width: 90%;
+    margin-left: 1px;
+    border: none;
+    background-color: inherit;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  .add-todo-item:focus{
+    outline: unset;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  animation: fidget 0.35s infinite;
 }

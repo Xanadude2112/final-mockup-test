@@ -5,7 +5,7 @@
   align-self: flex-start;
   width: 25%;
   height: 100%;
-  border-left: solid 2px #ffffff;
+  border-left: solid 2px #b6b6b6;
   color: #ffffff;
 
   > *{
@@ -28,7 +28,7 @@
   display: inline-block;
   color: #ffc800;
   filter: drop-shadow(0 0 1rem #ffffff);
-  animation: spin 0.25s linear
+  animation: spin 0.35s linear
 }
 
 @keyframes spin {
@@ -70,6 +70,16 @@
   height: 10px;
   border-radius: 20px;
   border: 2px solid #ffffff;
+  margin-right: 5%;
+  transition: 0.25s ease;
+}
+
+.checked{
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  border: 2px solid #00c300;
+  background-color: #00c300;
   margin-right: 5%;
   transition: 0.25s ease;
 }

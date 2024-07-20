@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import "../styles/Navbar.scss";
 
-function Navbar() {
+function Navbar({ modalToggler }) {
   return (
     <div className="nav">
       <h1 className="logo">ILLUMIN💫TE PROJECT</h1>
-      <div></div>
+      <div className="buttons">
+        <button>Login</button>
+        <button>Sign Up</button>
+      </div>
     </div>
   );
 }

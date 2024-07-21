@@ -29,7 +29,7 @@
   align-items: center;
   border-radius: 20px;
   border: solid 7px #e6b000;
-  width: 30%;
+  width: 40%;
   background: linear-gradient(300deg, #3d0063, #160024, #090012);
   background-size: 150% 150%;
   animation: gradient-animation 5s ease infinite;
@@ -57,6 +57,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  font-family: "Righteous", sans-serif;
+  color: #ffffff;
 
   input{
     margin: 5% 0;
@@ -109,4 +112,17 @@ input:focus{
   background-color: #ffffff;
   border: 5px solid #e6b000;
   color:  #e6b000;
+}
+
+.selector{
+  width: 150px;
+  padding: 2%;
+  background-color: #ffffff;
+  color: #3d0063;
+  font-family: "Righteous", sans-serif;
+  border-radius: 10px;
+}
+
+.selector:focus{
+  outline: unset;
 }

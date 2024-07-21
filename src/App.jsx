@@ -6,10 +6,13 @@ import TodoList from "./components/TodoList";
 import SideNavbar from "./components/SideNavbar";
 import SignUpModal from "./components/SignUpModal";
 import LoginModal from "./components/LoginModal";
+import ProjectGroupMembersModal from "./components/ProjectGroupMembersModal";  // Add this import
 
 function App() {
   const [signupModalOpen, setSignupModalOpen] = useState(false);
   const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const [groupMemberModalOpen, setGroupMemberModalOpen] = useState(false); 
+  const [selectedGroupMembers, setSelectedGroupMembers] = useState([]);  
   const [todoListItem, setTodoListItem] = useState([]);
   const [postItem, setPostItem] = useState([
     {
@@ -36,21 +39,18 @@ function App() {
       tech: ["MongoDB", "Express JS", "React", "Node JS"],
       people: ["Barry Bee", "Queen Latifa", "Drone Beigh", "Paul Ehn"]
     }
-  ])
- 
+  ]);
+
   const addTodoListItem = (text) => {
-    // determine the next id value
     const nextId = todoListItem.length > 0 
       ? Math.max(...todoListItem.map(item => item.id)) + 1 
       : 1;
 
-    // create the new todo item
     const addedTodoItem = {
       id: nextId,
       text
     };
 
-    // update the state with the new todo item
     const allTodosArr = [...todoListItem, addedTodoItem];
     setTodoListItem(allTodosArr);
   };
@@ -63,14 +63,27 @@ function App() {
     setLoginModalOpen((prevModal) => !prevModal);
   };
 
+  const groupMemberModalToggler = (members = []) => {
+    setSelectedGroupMembers(members);  // Set selected members
+    setGroupMemberModalOpen((prev) => !prev);
+  }
+
   return (
     <div className="master">
       {loginModalOpen && <LoginModal loginModalToggler={loginModalToggler} />}
       {signupModalOpen && <SignUpModal signupModalToggler={signupModalToggler} />}
+      {groupMemberModalOpen && (
+        <ProjectGroupMembersModal 
+          key={postItem.id}
+          title={postItem.title}
+          people={selectedGroupMembers} 
+          groupMemberModalToggler={groupMemberModalToggler} 
+        />
+      )}
       <Navbar loginModalToggler={loginModalToggler} signupModalToggler={signupModalToggler} />
       <div className="content-container">
         <SideNavbar />
-        <MainContent postItem={postItem}/>
+        <MainContent postItem={postItem} groupMemberModalToggler={groupMemberModalToggler} />
         <TodoList todoListItem={todoListItem} addTodoListItem={addTodoListItem} />
       </div>
     </div>

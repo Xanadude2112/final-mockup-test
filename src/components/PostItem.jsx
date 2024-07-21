@@ -1,7 +1,6 @@
-import { useState } from "react";
 import "../styles/PostItem.scss";
 
-function PostItem({ id, title, tech, people }) {
+function PostItem({ id, title, tech, people, groupMemberModalToggler }) {
   return (
     <div className="post-item-master">
       <div className="post-header">
@@ -9,7 +8,10 @@ function PostItem({ id, title, tech, people }) {
           <div className="project-image"></div>
           <h3>{title}</h3>
         </div>
-        <i className="fa-solid fa-people-group group-icon"></i>
+        <i 
+          className="fa-solid fa-people-group group-icon" 
+          onClick={() => groupMemberModalToggler(people)}
+        ></i>
       </div>
       <div className="project-description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dicta
@@ -21,8 +23,8 @@ function PostItem({ id, title, tech, people }) {
       </div>
       <div className="project-foot">
         <div className="tech-stack">
-          {tech.map((techSlot) => (
-            <div className="tech-div">{techSlot}</div>
+          {tech.map((techSlot, index) => (
+            <div key={index} className="tech-div">{techSlot}</div>
           ))}
         </div>
         <button className="request-join-btn">Request to join</button>

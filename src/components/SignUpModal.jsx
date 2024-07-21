@@ -14,6 +14,22 @@ function SignUpModal({ signupModalToggler }) {
             <input type="text" className="" placeholder="Name" />
             <input type="text" className="" placeholder="Email" />
             <input type="text" className="" placeholder="Password" />
+            <input type="text" className="" placeholder="Github" />
+            <p>Preferred Tech Stack</p>
+            <select className="selector" id="">
+              <option value="">TECH STACK</option>
+              <option value="">MERN</option>
+              <option value="">MEAN</option>
+              <option value="">LAMP</option>
+              <option value="">DJANGO</option>
+              <option value="">RUBY ON RAILS</option>
+              <option value="">JAM</option>
+              <option value="">SERVERLESS</option>
+              <option value="">PERN</option>
+              <option value="">SPRING BOOT ANGULAR</option>
+              <option value="">FLUTTER FIREBASE</option>
+            </select>
+            <div></div>
           </div>
           <button className="signup-button">Sign Up</button>
         </div>

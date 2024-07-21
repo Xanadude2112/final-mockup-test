@@ -1,9 +1,23 @@
 import "../styles/MainContent.scss";
+import PostItem from "./PostItem";
 
-function MainContent() {
+function MainContent({ postItem }) {
   return (
     <div className="main-master">
-      
+      <div className="add-post">
+        {" "}
+        Create a project <i className="fa-solid fa-plus add-post-icon"></i>
+      </div>
+      <div className="post-container">
+        {postItem.map((invdProj) => (
+          <PostItem
+            id={invdProj.id}
+            title={invdProj.title}
+            tech={invdProj.tech}
+            people={invdProj.people}
+          />
+        ))}
+      </div>
     </div>
   );
 }

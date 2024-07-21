@@ -33,3 +33,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.request-join-btn {
+  margin-right: 3%;
+  padding: 1%;
+}

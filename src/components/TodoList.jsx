@@ -33,12 +33,12 @@ function TodoList({ todoListItem, addTodoListItem }) {
   return (
     <div className="todo-master">
       <h2 className="todo-title">
-        Todo List <i className="fa-solid fa-plus plus" onClick={handleAddTodoItem}></i>
+        To do list <i className="fa-solid fa-plus plus" onClick={handleAddTodoItem}></i>
       </h2>
       {showInput && (
         <div className="new-todo-list-item">
           <div className="check-add"></div>
-          <input className="add-todo-item" type="text" value={newTodoItem} onChange={handleAddTodoChange} placeholder="Add new todo list item" />
+          <input className="add-todo-item" type="text" value={newTodoItem} onChange={handleAddTodoChange} placeholder="Add new to do list item" />
           <i className="fa-solid fa-circle-check todo-submit" onClick={handleTodoSubmit}></i>
         </div>
       )}

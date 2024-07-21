@@ -11,7 +11,33 @@ function App() {
   const [signupModalOpen, setSignupModalOpen] = useState(false);
   const [loginModalOpen, setLoginModalOpen] = useState(false);
   const [todoListItem, setTodoListItem] = useState([]);
-
+  const [postItem, setPostItem] = useState([
+    {
+      id: 1,
+      title: "THE BOMB.COM",
+      tech: ["Ruby", "React", "SCSS", "Postgresql"],
+      people: ["Mary", "Jane", "Hugh", "Janus"]
+    },
+    {
+      id: 2,
+      title: "PROVIDERS.NET",
+      tech: ["Express JS", "React", "TailwindCSS", "MySQL"],
+      people: ["Joe", "Mama", "Jenna", "Tull"]
+    },
+    {
+      id: 3,
+      title: "MeSphere",
+      tech: ["Express JS", "EJS", "Javascript", "CSS", "SQLite"],
+      people: ["Jose", "Rebecca", "Tommy"]
+    },
+    {
+      id: 4,
+      title: "THE HIVE",
+      tech: ["MongoDB", "Express JS", "React", "Node JS"],
+      people: ["Barry Bee", "Queen Latifa", "Drone Beigh", "Paul Ehn"]
+    }
+  ])
+ 
   const addTodoListItem = (text) => {
     // determine the next id value
     const nextId = todoListItem.length > 0 
@@ -44,7 +70,7 @@ function App() {
       <Navbar loginModalToggler={loginModalToggler} signupModalToggler={signupModalToggler} />
       <div className="content-container">
         <SideNavbar />
-        <MainContent />
+        <MainContent postItem={postItem}/>
         <TodoList todoListItem={todoListItem} addTodoListItem={addTodoListItem} />
       </div>
     </div>

@@ -27,14 +27,6 @@ function CreateNewPost({ handleCreateProjectButton, handleAddNewPostItem, setSho
       newProjectMembers.trim().length <= 0 ||
       newProjectStack.trim().length <= 0
     ) {
-      const button = document.getElementsByClassName("submit-new-project")[0];
-      button.classList.remove("submit-new-project");
-      button.classList.add("error");
-
-      setTimeout(function () {
-        button.classList.remove("error");
-        button.classList.add("submit-new-project");
-      }, 800);
     } else {
       handleAddNewPostItem({ newProjectName, newProjectDesc, newProjectMembers, newProjectStack });
       setShowNewProject(false);

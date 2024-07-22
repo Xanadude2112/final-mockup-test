@@ -84,6 +84,12 @@ input {
   border: solid 5px #3d0063;
 }
 
+.input-error{
+  padding: 2% 1%;
+  border-radius: 15px;
+  border: solid 5px #ff0000;
+}
+
 .submit-new-project {
   margin: 10% 0 2% 0;
   padding: 1%;

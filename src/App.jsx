@@ -19,25 +19,25 @@ function App() {
       id: 1,
       title: "THE BOMB.COM",
       tech: ["Ruby", "React", "SCSS", "Postgresql"],
-      people: ["Mary (Creator)", "Jane", "Hugh", "Janus"],
+      people: ["Mary", "Jane", "Hugh", "Janus"],
     },
     {
       id: 2,
       title: "PROVIDERS.NET",
       tech: ["Express JS", "React", "TailwindCSS", "MySQL"],
-      people: ["Joe (Creator)", "Mama", "Jenna", "Tull"],
+      people: ["Joe", "Mama", "Jenna", "Tull"],
     },
     {
       id: 3,
       title: "MeSphere",
       tech: ["Express JS", "EJS", "Javascript", "CSS", "SQLite"],
-      people: ["Jose (Creator)", "Rebecca", "Tommy"],
+      people: ["Jose", "Rebecca", "Tommy"],
     },
     {
       id: 4,
       title: "THE HIVE",
       tech: ["MongoDB", "Express JS", "React", "Node JS"],
-      people: ["Barry Bee (Creator)", "Queen Latifa", "Drone Beigh", "Paul Ehn"],
+      people: ["Barry Bee", "Queen Latifa", "Drone Beigh", "Paul Ehn"],
     },
   ]);
 

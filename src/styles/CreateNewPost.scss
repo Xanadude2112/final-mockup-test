@@ -1,0 +1,104 @@
+.new-project-master {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 93%;
+  padding-bottom: 5%;
+  margin: 3% 0 5% 1%;
+  border-radius: 15px;
+  border: 5px solid #3d0063;
+  background-color: #ffffffef;
+  filter: drop-shadow(0 0 0.3rem #ffffff);
+}
+
+.close-new-post {
+  align-self: flex-end;
+  color: #3d0063;
+  margin-right: 5%;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.close-new-post:hover {
+  color: #ff0000;
+}
+
+.new-project-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Righteous", sans-serif;
+  color: #3d0063;
+}
+
+.new-project-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  p {
+    font-family: "Righteous", sans-serif;
+    color: #3d0063;
+  }
+}
+
+.new-project-members {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  p {
+    font-family: "Righteous", sans-serif;
+    color: #3d0063;
+  }
+}
+
+.new-project-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  p {
+    font-family: "Righteous", sans-serif;
+    color: #3d0063;
+  }
+}
+
+.new-project-stack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  p {
+    font-family: "Righteous", sans-serif;
+    color: #3d0063;
+  }
+}
+
+input {
+  padding: 2% 1%;
+  border-radius: 15px;
+  border: solid 5px #3d0063;
+}
+
+.submit-new-project {
+  margin: 10% 0 2% 0;
+  padding: 1%;
+  font-family: "Righteous", sans-serif;
+  font-size: 0.8rem;
+  background-color: #e6b000;
+  color: #ffffff;
+  border: 2px solid #e6b000;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.submit-new-project:hover {
+  background-color: #ffffff;
+  color: #e6b000;
+  border: 2px solid #e6b000;
+}
